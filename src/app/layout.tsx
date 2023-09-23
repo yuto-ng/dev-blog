@@ -1,5 +1,5 @@
 import { KumaRegistry } from "@kuma-ui/next-plugin/registry"
- 
+
 export default function RootLayout({
   children,
 }: {
