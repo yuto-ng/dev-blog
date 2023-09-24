@@ -1,0 +1,11 @@
+import { styles } from './styles';
+
+type Props = {
+    text: string;
+};
+
+const Test: React.FC<Props> = ({ text }) => {
+    return <div className={styles.container}>{text}</div>;
+};
+
+export default Test;
