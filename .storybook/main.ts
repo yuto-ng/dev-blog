@@ -1,25 +1,30 @@
 import type { StorybookConfig } from '@storybook/nextjs';
-import KumaUIWebpackPlugin from "@kuma-ui/webpack-plugin";
+const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
+const { merge } = require('webpack-merge');
+import * as path from 'path';
 
 const config: StorybookConfig = {
-    stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+    stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-onboarding',
         '@storybook/addon-interactions',
     ],
+    // NOTE: storybookでpublicフォルダ内の画像を読み込むための設定
+    staticDirs: ['../public'],
     framework: {
         name: '@storybook/nextjs',
-        options: {},
+        options: {
+            nextConfigPath: path.resolve(__dirname, '../next.config.js'),
+        },
     },
     docs: {
         autodocs: 'tag',
     },
-    webpackFinal: (config) => {
-    config.plugins = [...(config.plugins ?? []), new KumaUIWebpackPlugin()];
-
-    return config;
-    },
+    webpackFinal: async config =>
+        merge(config, {
+            plugins: [new VanillaExtractPlugin()],
+        }),
 };
 export default config;

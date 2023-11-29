@@ -1,8 +1,7 @@
-const { withKumaUI } = require("@kuma-ui/next-plugin");
- 
-/** @type {import('next').NextConfig} */
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
+
 const nextConfig = {
-  reactStrictMode: true,
+    transpilePackages: ['@company/design-system'],
 };
- 
-module.exports = withKumaUI(nextConfig);
+
+module.exports = createVanillaExtractPlugin(nextConfig);

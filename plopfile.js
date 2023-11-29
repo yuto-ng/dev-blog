@@ -31,8 +31,8 @@ module.exports = function (plop) {
                 },
                 {
                     type: 'add',
-                    path: componentPath + 'styles.ts',
-                    templateFile: 'plop/styles.ts.hbs',
+                    path: componentPath + 'style.css.ts',
+                    templateFile: 'plop/styles.css.ts.hbs',
                 },
                 {
                     type: 'add',
