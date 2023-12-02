@@ -1,11 +1,9 @@
-import { Button, css } from '@kuma-ui/core';
+import { style } from '@vanilla-extract/css';
 
 export default function Home() {
-    const style = {
-        container: css`
-            background-color: red;
-        `,
-    };
+    const sample = style({
+        backgroundColor: 'red',
+    });
 
-    return <Button className={style.container}>Hello</Button>;
+    return <div className={sample}>Hello</div>;
 }
