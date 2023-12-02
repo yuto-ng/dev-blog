@@ -1,17 +1,17 @@
 import Image from 'next/image';
 
-import { iconStyles, IconSize } from './style.css';
+import * as style from './style.css';
 
-import { IconName } from '@/util/type/Icon';
+import { IconName, IconSize } from '@/util/type/Icon';
 
 type Props = {
-    iconType: IconName;
+    iconName: IconName;
     size: IconSize;
 };
 
-const Icon: React.FC<Props> = ({ iconType, size }) => {
-    const iconStyle = iconStyles[size];
-    const ICON_URL = `/reactIcons/${iconType}.svg`;
+const Icon: React.FC<Props> = ({ iconName, size }) => {
+    const iconStyle = style.iconStyles[size];
+    const ICON_URL = `/reactIcons/${iconName}.svg`;
 
     return (
         <div className={iconStyle}>

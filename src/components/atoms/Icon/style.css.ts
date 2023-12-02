@@ -1,11 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-const ICON_SIZE = {
-    m: { height: '24px', width: '24px' },
-    s: { height: '16px', width: '16px' },
-};
-
-export type IconSize = keyof typeof ICON_SIZE;
+import { ICON_SIZE } from '@/util/constants/size';
 
 export const iconStyles = {
     m: style({
