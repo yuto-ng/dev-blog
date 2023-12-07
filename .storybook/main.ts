@@ -22,9 +22,19 @@ const config: StorybookConfig = {
     docs: {
         autodocs: 'tag',
     },
-    webpackFinal: async config =>
-        merge(config, {
-            plugins: [new VanillaExtractPlugin()],
-        }),
+    core: {
+        "builder": "@storybook/builder-webpack5"
+    },
+    webpackFinal: async (config) => {
+    return merge(config, {
+        plugins: [new VanillaExtractPlugin()],
+        resolve: {
+            alias: {
+                ...config.resolve.alias,
+                '@': path.resolve(__dirname, '../src'),
+            },
+        },
+    });
+}
 };
 export default config;
