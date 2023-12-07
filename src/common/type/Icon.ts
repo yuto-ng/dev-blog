@@ -1,4 +1,4 @@
-import { ICON_SIZE } from '@/util/constants/size';
+import { ICON_SIZE } from '@/common/constants/size';
 
 export type IconName =
     | 'FillCaretRight'

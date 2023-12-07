@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-import { ICON_SIZE } from '@/util/constants/size';
+import { ICON_SIZE } from '@/common/constants/size';
 
 export const iconStyles = {
     m: style({
