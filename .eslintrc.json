@@ -21,8 +21,15 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": ["@typescript-eslint", "react", "import"],
+    "plugins": ["@typescript-eslint", "react", "import", "react-hooks"],
     "rules": {
+        "react-hooks/exhaustive-deps": [
+            "warn",
+            {
+                "additionalHooks": "(useRecoilCallback|useRecoilTransaction_UNSTABLE)"
+            }
+        ],
+        "react-hooks/rules-of-hooks": "error",
         "react/react-in-jsx-scope": "off", //Reactのimportを不要にする
         "react/prop-types": "off",
         "no-undef": "off",
