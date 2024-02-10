@@ -1,6 +1,6 @@
 import type { StorybookConfig } from '@storybook/nextjs';
-const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
-const { merge } = require('webpack-merge');
+import { VanillaExtractPlugin } from '@vanilla-extract/webpack-plugin';
+import { merge } from 'webpack-merge';
 import * as path from 'path';
 
 const config: StorybookConfig = {
@@ -16,25 +16,22 @@ const config: StorybookConfig = {
     framework: {
         name: '@storybook/nextjs',
         options: {
-            nextConfigPath: path.resolve(__dirname, '../next.config.js'),
+            nextConfigPath: '/Users/bp-123/Documents/private/nextjs-blog/next.config.js',
         },
     },
     docs: {
         autodocs: 'tag',
     },
-    core: {
-        "builder": "@storybook/builder-webpack5"
-    },
-    webpackFinal: async (config) => {
-    return merge(config, {
-        plugins: [new VanillaExtractPlugin()],
-        resolve: {
-            alias: {
-                ...config.resolve.alias,
-                '@': path.resolve(__dirname, '../src'),
+    webpackFinal: async config => {
+        return merge(config, {
+            plugins: [new VanillaExtractPlugin()],
+            resolve: {
+                alias: {
+                    ...config.resolve?.alias,
+                    '@': path.resolve(__dirname, '../src'),
+                },
             },
-        },
-    });
-}
+        });
+    },
 };
 export default config;
