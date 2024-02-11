@@ -2,7 +2,8 @@ import Image from 'next/image';
 
 import * as style from './style.css';
 
-import { IconName, IconSize } from '@/common/type/Icon';
+import { IconSize } from '@/constants';
+import { IconName } from '@/type';
 
 type Props = {
     iconName: IconName;
