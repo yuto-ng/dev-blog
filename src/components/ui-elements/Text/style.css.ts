@@ -1,4 +1,4 @@
-import { style, styleVariants } from '@vanilla-extract/css';
+import { styleVariants } from '@vanilla-extract/css';
 
 import { Colors, colors } from '@/theme/colors';
 import { FontSizes, fontSizes } from '@/theme/fontSizes';
@@ -13,13 +13,10 @@ export type TextStyleProps = {
     color: Colors;
 };
 
-export const baseStyle = style({
-    fontFamily: fontFamily.text,
-});
-
-export const textVariants = {
+export const container = {
     size: styleVariants(fontSizes, size => ({ fontSize: size })),
     color: styleVariants(colors, color => ({ color: color })),
     weight: styleVariants(fontWeights, fontWeight => ({ fontWeight: fontWeight })),
     lineHeight: styleVariants(lineHeights, lineHeight => ({ lineHeight: lineHeight })),
+    fontFamily: fontFamily.text,
 };

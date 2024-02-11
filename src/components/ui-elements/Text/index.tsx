@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
-import { TextStyleProps, textVariants, baseStyle } from './style.css';
+import * as style from './style.css';
 
 type Props = {
     children: ReactNode;
-} & Partial<TextStyleProps>;
+} & Partial<style.TextStyleProps>;
 
 const Text: React.FC<Props> = ({
     children,
@@ -15,11 +15,11 @@ const Text: React.FC<Props> = ({
 }) => {
     const getTextStyles = () => {
         return [
-            baseStyle,
-            textVariants.size[size],
-            textVariants.color[color],
-            textVariants.weight[weight],
-            textVariants.lineHeight[lineHeight],
+            style.container.size[size],
+            style.container.lineHeight[lineHeight],
+            style.container.weight[weight],
+            style.container.color[color],
+            style.container.fontFamily,
         ].join(' ');
     };
 

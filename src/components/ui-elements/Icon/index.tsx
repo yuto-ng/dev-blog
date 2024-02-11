@@ -11,11 +11,11 @@ type Props = {
 };
 
 const Icon: React.FC<Props> = ({ iconName, size }) => {
-    const iconStyle = style.iconStyles[size];
+    const container = style.container[size];
     const ICON_URL = `/reactIcons/${iconName}.svg`;
 
     return (
-        <div className={iconStyle}>
+        <div className={container}>
             <Image src={ICON_URL} alt="icon" fill />
         </div>
     );
