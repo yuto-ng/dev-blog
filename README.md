@@ -13,3 +13,30 @@
   - Actions(CI)設定できたらする。多分無理
 - 各UIコンポーネントに必ずStorybook実装
 - ディレクトリ構成はとりあえずfeaturesで切る方針(考え中)
+
+# ディレクトリ構成
+src/
+├── app/
+├── components/
+│   ├── ui-elements/
+│   └── ui-parts/
+├── constants/
+│   └── index.ts
+├── features/
+│   ├── ArticleDetail/
+│   ├── CategoryArticles/
+│   ├── CategoryArticleSummary/
+│   ├── SideContents/
+│   └── TableOfContents/
+├── store/
+│   ├── atoms.ts
+│   ├── recoilKeys.ts
+│   └── selectors.ts
+├── theme/
+│   ├── colors.ts
+│   ├── fontFamily.ts
+│   ├── fontSizes.ts
+│   ├── fontWeights.ts
+│   └── lineHeights.ts
+└── type/
+    └── index.ts
