@@ -12,6 +12,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        profileImage: 'https://picsum.photos/200/300',
+        profileImageUrl: 'https://picsum.photos/200/300',
     },
 };
