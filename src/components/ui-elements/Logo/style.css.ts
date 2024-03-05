@@ -1,16 +1,15 @@
 import { style } from '@vanilla-extract/css';
 
+import { colors } from '@/theme/colors';
+import { fontFamily } from '@/theme/fontfamily';
+
 export const container = style({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'royalBlue',
+    background: colors.royalBlue,
     color: 'white',
     width: '9%',
     border: '2px solid white',
-});
-
-export const content = style({
-    height: '100%',
-    width: '100%',
+    fontFamily: fontFamily.logo,
 });
