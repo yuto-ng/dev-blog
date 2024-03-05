@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 
 import { colors } from '@/theme/colors';
-import { fontFamily } from '@/theme/fontfamily';
+import { fontFamily } from '@/theme/fontFamily';
 
 export const container = style({
     display: 'flex',

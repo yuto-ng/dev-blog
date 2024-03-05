@@ -1,9 +1,9 @@
 import { styleVariants } from '@vanilla-extract/css';
 
 import { Colors, colors } from '@/theme/colors';
+import { fontFamily } from '@/theme/fontFamily';
 import { FontSizes, fontSizes } from '@/theme/fontSizes';
 import { FontWeights, fontWeights } from '@/theme/fontWeights';
-import { fontFamily } from '@/theme/fontfamily';
 import { LineHeights, lineHeights } from '@/theme/lineHeights';
 
 export type TextStyleProps = {
