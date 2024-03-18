@@ -1,12 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { readdirSync } = require('fs');
+import { readdirSync } from 'fs';
 
 const features = readdirSync('src/features').map(it => ({
     name: it,
     value: it,
 }));
 
-module.exports = function (plop) {
+export default function (plop) {
     /**
      * src/components以下にコンポーネントを作成する
      */
@@ -97,4 +96,4 @@ module.exports = function (plop) {
             ];
         },
     });
-};
+}
