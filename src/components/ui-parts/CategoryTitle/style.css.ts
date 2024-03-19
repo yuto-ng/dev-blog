@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
+import { borderRadius } from '@/theme/borderRadius';
 import { colors } from '@/theme/colors';
 
 export const container = style({
@@ -9,5 +10,5 @@ export const container = style({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: '4px',
+    borderRadius: borderRadius.default,
 });
