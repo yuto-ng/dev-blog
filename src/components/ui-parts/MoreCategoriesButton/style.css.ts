@@ -4,11 +4,9 @@ import { borderRadius } from '@/theme/borderRadius';
 import { colors } from '@/theme/colors';
 
 export const container = style({
+    width: '206px',
+    height: '30px',
     backgroundColor: colors.royalBlue,
-    height: '48px',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    color: colors.white,
     borderRadius: borderRadius.default,
 });
