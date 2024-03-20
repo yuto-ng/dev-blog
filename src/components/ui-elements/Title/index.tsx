@@ -20,7 +20,7 @@ const Title: React.FC<Props> = ({ children, color = 'lightBlack', size }) => {
             zenKakuGothicNew.className,
         ].join(' ');
     };
-    return <div className={getTextStyles()}>{children}</div>;
+    return <h1 className={getTextStyles()}>{children}</h1>;
 };
 
 export default Title;
