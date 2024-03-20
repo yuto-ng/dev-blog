@@ -1,5 +1,8 @@
 import { style } from '@vanilla-extract/css';
 
-export const SampleStyle = style({
-    color: 'red',
+export const container = style({
+    width: '100px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
 });
