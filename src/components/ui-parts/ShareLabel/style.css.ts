@@ -12,10 +12,21 @@ const BASE_STYLE: CSSProperties = {
 };
 
 export const container = style({
-    width: '85px',
-    display: 'flex',
+    width: '90px',
+    display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
+    position: 'relative',
+    ':before': {
+        ...BASE_STYLE,
+        left: 8,
+        transform: 'translateX(-50%) rotate(45deg)',
+    },
+    ':after': {
+        ...BASE_STYLE,
+        right: 8,
+        transform: 'translateX(50%) rotate(-45deg)',
+    },
 });
 
 export const content = style({
