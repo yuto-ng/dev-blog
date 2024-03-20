@@ -33,7 +33,7 @@ const Text: React.FC<Props> = ({
         ].join(' ');
     };
 
-    return <div className={getTextStyles()}>{children}</div>;
+    return <span className={getTextStyles()}>{children}</span>;
 };
 
 export default Text;
