@@ -6,7 +6,7 @@ import { Noto_Sans_JP, Noto_Serif_Tamil, Zen_Kaku_Gothic_New, Farsan } from 'nex
  */
 export const notoSansJp = Noto_Sans_JP({
     subsets: ['cyrillic'],
-    weight: ['400'],
+    weight: ['200'],
 });
 
 /**
