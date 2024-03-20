@@ -9,6 +9,6 @@ export const container = style({
     backgroundColor: colors.royalBlue,
     display: 'flex',
     justifyContent: 'space-around',
-    borderRadius: borderRadius.default,
+    borderRadius: borderRadius.m,
     alignItems: 'center',
 });
