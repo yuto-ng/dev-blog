@@ -1,4 +1,5 @@
 export const borderRadius = {
-    default: '4px',
+    m: '4px',
+    l: '16px',
     circle: '50%',
 } as const;
