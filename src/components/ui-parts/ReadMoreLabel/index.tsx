@@ -6,7 +6,7 @@ import Text from '@/components/ui-elements/Text';
 const ReadMoreLabel: React.FC = () => {
     return (
         <div className={style.container}>
-            <Text color="white" size="xs">
+            <Text lineHeight="s" color="white" size="xs">
                 続きを読む
             </Text>
             <Icon iconName="OutlineWhiteDoubleRight" size="s"></Icon>

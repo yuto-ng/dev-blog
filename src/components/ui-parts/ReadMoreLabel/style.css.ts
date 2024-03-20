@@ -5,10 +5,10 @@ import { colors } from '@/theme/colors';
 
 export const container = style({
     width: '92px',
-    height: '20px',
+    padding: '2px',
     backgroundColor: colors.royalBlue,
     display: 'flex',
     justifyContent: 'space-around',
-    borderRadius: borderRadius.default,
+    borderRadius: borderRadius.m,
     alignItems: 'center',
 });
