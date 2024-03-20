@@ -1,4 +1,4 @@
-import { Noto_Sans_JP, Noto_Serif_Tamil, Zen_Kaku_Gothic_New, Farsan } from 'next/font/google';
+import { Noto_Sans_JP, Zen_Kaku_Gothic_New, Farsan } from 'next/font/google';
 
 // TODO: 全体的にページ実装時にバランス見て調整
 /**
@@ -6,15 +6,7 @@ import { Noto_Sans_JP, Noto_Serif_Tamil, Zen_Kaku_Gothic_New, Farsan } from 'nex
  */
 export const notoSansJp = Noto_Sans_JP({
     subsets: ['cyrillic'],
-    weight: ['200'],
-});
-
-/**
- * LinkText
- */
-export const notoSerifTamil = Noto_Serif_Tamil({
-    subsets: ['latin'],
-    weight: ['400'],
+    // NOTE: fontWeightsで指定できるので、設定しない
 });
 
 /**

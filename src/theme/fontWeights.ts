@@ -1,6 +1,6 @@
 export type FontWeights = keyof typeof fontWeights;
 
 export const fontWeights = {
-    normal: 500,
-    bold: 800,
+    normal: 200,
+    bold: 700,
 } as const;
