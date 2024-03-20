@@ -3,7 +3,14 @@ import Image from 'next/image';
 import * as style from './style.css';
 
 import { IconSize } from '@/constants';
-import { IconName } from '@/type';
+
+type IconName =
+    | 'FillCaretRight'
+    | 'OutlineClockCircle'
+    | 'OutlineDoubleRight'
+    | 'OutlineSearch'
+    | 'OutlineTwitter'
+    | 'OutlineWhiteDoubleRight';
 
 type Props = {
     iconName: IconName;
