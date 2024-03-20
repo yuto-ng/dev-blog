@@ -8,5 +8,5 @@ export const container = style({
     height: '30px',
     backgroundColor: colors.royalBlue,
     color: colors.white,
-    borderRadius: borderRadius.default,
+    borderRadius: borderRadius.m,
 });
