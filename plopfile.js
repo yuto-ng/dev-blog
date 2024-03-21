@@ -17,7 +17,7 @@ export default function (plop) {
                 type: 'list',
                 name: 'name',
                 message: 'feature name please',
-                choices: ['ui-elements', 'ui-parts'],
+                choices: ['ui-elements', 'ui-parts', 'organisms'],
             },
             {
                 // type: "input",
