@@ -15,19 +15,19 @@
 - ディレクトリ構成はとりあえずfeaturesで切る方針(考え中)
 
 # ディレクトリ構成
-src/<br>
-├── app/<br>
-├── components/<br>
-│   ├── ui-elements/<br>
-│   ├── ui-parts/<br>
-│　　　　　　└── ui-parts/<br>
-├── constants/<br>
-│   └── index.ts<br>
-├── features/<br>
-├── store/<br>
-│   ├── atoms.ts<br>
-│   ├── recoilKeys.ts<br>
-│   └── selectors.ts<br>
-├── theme/<br>
-└── type/<br>
-    └── index.ts<br>
+src/  
+├─ app/  
+├─ components/  
+│   ├─ ui-elements/  
+│   ├─ ui-parts/  
+│   └─ organisms/  
+├─ constants/  
+│   └─ index.ts  
+├─ features/  
+├─ store/  
+│   ├─ atoms.ts  
+│   ├─ recoilKeys.ts  
+│   └─ selectors.ts  
+├─ theme/  
+└─ type/  
+    └─ index.ts  
