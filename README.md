@@ -19,7 +19,8 @@ src/<br>
 ├── app/<br>
 ├── components/<br>
 │   ├── ui-elements/<br>
-│   └── ui-parts/<br>
+│   ├── ui-parts/<br>
+│　　　　　　└── ui-parts/<br>
 ├── constants/<br>
 │   └── index.ts<br>
 ├── features/<br>
