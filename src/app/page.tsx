@@ -1,9 +1,10 @@
-import { style } from '@vanilla-extract/css';
+import LinkText from '@/components/ui-elements/LinkText';
 
-export default function Home() {
-    const sample = style({
-        backgroundColor: 'red',
-    });
-
-    return <div className={sample}>Hello</div>;
+export default function HomePage() {
+    return (
+        <>
+            <LinkText url="/category/1/1">カテゴリーページ</LinkText>
+            <LinkText url="/category/1/article/1">記事詳細ページ</LinkText>
+        </>
+    );
 }
