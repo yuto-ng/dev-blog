@@ -1,7 +1,7 @@
 import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
+const withVanillaExtract = createVanillaExtractPlugin();
 
-const nextConfig = {
-    transpilePackages: ['@company/design-system'],
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-export default createVanillaExtractPlugin(nextConfig);
+export default withVanillaExtract(nextConfig);
