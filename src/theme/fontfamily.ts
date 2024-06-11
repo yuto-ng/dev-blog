@@ -4,7 +4,7 @@ import { Noto_Sans_JP, Zen_Kaku_Gothic_New, Farsan } from 'next/font/google';
 /**
  * Text
  */
-export const notoSansJp = Noto_Sans_JP({
+const notoSansJp = Noto_Sans_JP({
     subsets: ['cyrillic'],
     // NOTE: fontWeightsで指定できるので、設定しない
 });
@@ -12,7 +12,7 @@ export const notoSansJp = Noto_Sans_JP({
 /**
  * Title
  */
-export const zenKakuGothicNew = Zen_Kaku_Gothic_New({
+const zenKakuGothicNew = Zen_Kaku_Gothic_New({
     subsets: ['latin'],
     weight: ['500'],
 });
@@ -20,8 +20,16 @@ export const zenKakuGothicNew = Zen_Kaku_Gothic_New({
 /**
  * Logo
  */
-export const farsan = Farsan({
+const farsan = Farsan({
     subsets: ['latin'],
     // TODO: ロゴ実装時にweightを調整
     weight: ['400'],
 });
+
+export type FontFamilies = keyof typeof fontFamilies;
+
+export const fontFamilies = {
+    text: notoSansJp,
+    title: zenKakuGothicNew,
+    logo: farsan,
+} as const;

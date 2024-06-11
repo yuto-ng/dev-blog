@@ -3,9 +3,9 @@ import { ReactNode } from 'react';
 import * as style from './style.css';
 
 import { Colors } from '@/theme/colors';
+import { fontFamilies } from '@/theme/fontFamily';
 import { FontSizes } from '@/theme/fontSizes';
 import { FontWeights } from '@/theme/fontWeights';
-import { notoSansJp } from '@/theme/fontfamily';
 import { LineHeights } from '@/theme/lineHeights';
 
 type Props = {
@@ -29,7 +29,7 @@ const Text: React.FC<Props> = ({
             style.container.lineHeight[lineHeight],
             style.container.weight[weight],
             style.container.color[color],
-            notoSansJp.className,
+            fontFamilies['text'].className,
         ].join(' ');
     };
 

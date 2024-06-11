@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import * as style from './style.css';
 
-import { notoSansJp } from '@/theme/fontfamily';
+import { fontFamilies } from '@/theme/fontFamily';
 
 type Props = {
     children: ReactNode;
@@ -25,7 +25,7 @@ const LinkText: React.FC<Props> = ({
             style.container.lineHeight[lineHeight],
             style.container.weight[weight],
             style.container.color[color],
-            notoSansJp.className,
+            fontFamilies['text'].className,
         ].join(' ');
     };
     return (
