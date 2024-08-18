@@ -9,8 +9,8 @@ export const container = style({
     background: colors.royalBlue,
     color: 'white',
     border: '4px solid white',
-    maxWidth: '190px',
-    maxHeight: '50px',
+    width: '190px',
+    height: '37px',
     // NOTE: バランスが悪いので、paddingを追加
     paddingTop: '5px',
 });
