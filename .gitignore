@@ -38,3 +38,4 @@ next-env.d.ts
 /storybook-static
 
 /yarn.lock
+*storybook.log

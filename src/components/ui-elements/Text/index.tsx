@@ -1,19 +1,15 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 import * as style from './style.css';
 
-import { Colors } from '@/theme/colors';
-import { fontFamilies } from '@/theme/fontFamily';
-import { FontSizes } from '@/theme/fontSizes';
-import { FontWeights } from '@/theme/fontWeights';
-import { LineHeights } from '@/theme/lineHeights';
+import { vars } from '@/theme/theme.css';
 
 type Props = {
     children: ReactNode;
-    size?: FontSizes;
-    lineHeight?: LineHeights;
-    weight?: FontWeights;
-    color?: Colors;
+    size?: keyof typeof vars.fontSizes;
+    lineHeight?: keyof typeof vars.lineHeights;
+    weight?: keyof typeof vars.fontWeights;
+    color?: keyof typeof vars.colors;
 };
 
 const Text: React.FC<Props> = ({
@@ -29,7 +25,7 @@ const Text: React.FC<Props> = ({
             style.container.lineHeight[lineHeight],
             style.container.weight[weight],
             style.container.color[color],
-            fontFamilies['text'].className,
+            style.container.fontFamily['text'],
         ].join(' ');
     };
 

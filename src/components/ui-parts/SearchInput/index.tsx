@@ -1,3 +1,5 @@
+import React from 'react';
+
 import * as style from './style.css';
 
 import Icon from '@/components/ui-elements/Icon';

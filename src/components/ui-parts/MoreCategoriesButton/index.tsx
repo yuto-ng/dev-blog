@@ -1,16 +1,18 @@
+import React from 'react';
+
 import * as style from './style.css';
 
 import Text from '@/components/ui-elements/Text';
 
 type Props = {
-    text: string;
+    label: string;
 };
 
-const MoreCategoriesButton: React.FC<Props> = ({ text }) => {
+const MoreCategoriesButton: React.FC<Props> = ({ label }) => {
     return (
         <button className={style.container} type="button">
             <Text color="white" size="m">
-                {text}
+                {label}
             </Text>
         </button>
     );

@@ -1,14 +1,13 @@
 import { style } from '@vanilla-extract/css';
 
-import { borderRadius } from '@/theme/borderRadius';
-import { colors } from '@/theme/colors';
+import { vars } from '@/theme/theme.css';
 
 export const container = style({
     width: '92px',
     padding: '2px',
-    backgroundColor: colors.royalBlue,
+    backgroundColor: vars.colors.royalBlue,
     display: 'flex',
     justifyContent: 'space-around',
-    borderRadius: borderRadius.m,
+    borderRadius: vars.borderRadius.m,
     alignItems: 'center',
 });

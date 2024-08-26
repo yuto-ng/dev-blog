@@ -1,12 +1,12 @@
 import { style } from '@vanilla-extract/css';
 
-import { colors } from '@/theme/colors';
+import { vars } from '@/theme/theme.css';
 
 export const container = style({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: colors.royalBlue,
+    background: vars.colors.royalBlue,
     color: 'white',
     border: '4px solid white',
     width: '190px',

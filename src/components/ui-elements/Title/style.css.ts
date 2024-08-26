@@ -1,13 +1,12 @@
 import { styleVariants } from '@vanilla-extract/css';
 
-import { colors } from '@/theme/colors';
-import { fontSizes } from '@/theme/fontSizes';
-import { letterSpacings } from '@/theme/letterSpacing';
+import { vars } from '@/theme/theme.css';
 
 export const container = {
-    color: styleVariants(colors, color => ({ color: color })),
-    size: styleVariants(fontSizes, size => ({ fontSize: size })),
-    letterSpacing: styleVariants(letterSpacings, letterSpacing => ({
+    color: styleVariants(vars.colors, color => ({ color: color })),
+    size: styleVariants(vars.fontSizes, size => ({ fontSize: size })),
+    letterSpacing: styleVariants(vars.letterSpacings, letterSpacing => ({
         letterSpacing: letterSpacing,
     })),
+    fontFamily: styleVariants(vars.fontFamilies, fontFamily => ({ fontFamily: fontFamily })),
 };

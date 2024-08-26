@@ -1,8 +1,12 @@
+import React from 'react';
+
 import Image from 'next/image';
+
+import { vars } from '../../../theme/theme.css';
 
 import * as style from './style.css';
 
-import { IconSize } from '@/constants';
+// import { vars } from '@/theme/theme.css';
 
 type IconName =
     | 'FillCaretRight'
@@ -14,15 +18,14 @@ type IconName =
 
 type Props = {
     iconName: IconName;
-    size: IconSize;
+    size: keyof typeof vars.iconSizes;
 };
 
 const Icon: React.FC<Props> = ({ iconName, size }) => {
-    const container = style.container[size];
     const ICON_URL = `/reactIcons/${iconName}.svg`;
 
     return (
-        <div className={container}>
+        <div className={style.container[size]}>
             <Image src={ICON_URL} alt="icon" fill />
         </div>
     );

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import * as style from './style.css';
 
 import LinkText from '@/components/ui-elements/LinkText';

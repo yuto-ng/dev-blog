@@ -1,3 +1,5 @@
+import React from 'react';
+
 import LinkText from '@/components/ui-elements/LinkText';
 
 export default function HomePage() {

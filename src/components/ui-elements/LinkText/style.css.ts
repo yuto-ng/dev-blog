@@ -1,20 +1,11 @@
 import { styleVariants } from '@vanilla-extract/css';
 
-import { Colors, colors } from '@/theme/colors';
-import { FontSizes, fontSizes } from '@/theme/fontSizes';
-import { FontWeights, fontWeights } from '@/theme/fontWeights';
-import { LineHeights, lineHeights } from '@/theme/lineHeights';
-
-export type LinkTextStyleProps = {
-    size: FontSizes;
-    lineHeight: LineHeights;
-    weight: FontWeights;
-    color: Colors;
-};
+import { vars } from '@/theme/theme.css';
 
 export const container = {
-    size: styleVariants(fontSizes, size => ({ fontSize: size })),
-    color: styleVariants(colors, color => ({ color: color })),
-    weight: styleVariants(fontWeights, fontWeight => ({ fontWeight: fontWeight })),
-    lineHeight: styleVariants(lineHeights, lineHeight => ({ lineHeight: lineHeight })),
+    size: styleVariants(vars.fontSizes, size => ({ fontSize: size })),
+    color: styleVariants(vars.colors, color => ({ color: color })),
+    weight: styleVariants(vars.fontWeights, fontWeight => ({ fontWeight: fontWeight })),
+    lineHeight: styleVariants(vars.lineHeights, lineHeight => ({ lineHeight: lineHeight })),
+    fontFamily: styleVariants(vars.fontFamilies, fontFamily => ({ fontFamily: fontFamily })),
 };

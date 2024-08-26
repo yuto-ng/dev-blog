@@ -1,21 +1,19 @@
 import { style } from '@vanilla-extract/css';
 
-import { ICON_SIZE } from '@/constants';
+// import { vars } from '@/theme/theme.css';
+import { vars } from '../../../theme/theme.css';
 
 export const container = {
     l: style({
-        height: ICON_SIZE.l.height,
-        width: ICON_SIZE.l.width,
+        ...vars.iconSizes.l,
         position: 'relative',
     }),
     m: style({
-        height: ICON_SIZE.m.height,
-        width: ICON_SIZE.m.width,
+        ...vars.iconSizes.m,
         position: 'relative',
     }),
     s: style({
-        height: ICON_SIZE.s.height,
-        width: ICON_SIZE.s.width,
+        ...vars.iconSizes.s,
         position: 'relative',
     }),
 };

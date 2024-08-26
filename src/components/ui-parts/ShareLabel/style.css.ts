@@ -1,13 +1,13 @@
 import { style, CSSProperties } from '@vanilla-extract/css';
 
-import { colors } from '@/theme/colors';
+import { vars } from '@/theme/theme.css';
 
 const BASE_STYLE: CSSProperties = {
     content: '""',
     position: 'absolute',
     width: '20px',
     height: '2px',
-    backgroundColor: colors.royalBlue,
+    backgroundColor: vars.colors.royalBlue,
     top: '50%',
 };
 

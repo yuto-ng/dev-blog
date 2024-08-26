@@ -1,9 +1,9 @@
 import { style } from '@vanilla-extract/css';
 
-import { colors } from '@/theme/colors';
+import { vars } from '@/theme/theme.css';
 
 export const container = style({
-    backgroundColor: colors.royalBlue,
+    backgroundColor: vars.colors.royalBlue,
     height: '65px',
     display: 'flex',
     justifyContent: 'center',

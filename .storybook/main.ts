@@ -9,7 +9,6 @@ const config: StorybookConfig = {
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-onboarding',
-        '@storybook/addon-interactions',
     ],
     // NOTE: storybookでpublicフォルダ内の画像を読み込むための設定
     staticDirs: ['../public'],
