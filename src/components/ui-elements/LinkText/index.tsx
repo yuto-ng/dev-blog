@@ -1,16 +1,19 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 import Link from 'next/link';
 
 import * as style from './style.css';
 
-import { fontFamilies } from '@/theme/fontFamily';
+import { vars } from '@/theme/theme.css';
 
 type Props = {
     children: ReactNode;
     url: string;
-} & Partial<style.LinkTextStyleProps>;
-
+    size?: keyof typeof vars.fontSizes;
+    lineHeight?: keyof typeof vars.lineHeights;
+    weight?: keyof typeof vars.fontWeights;
+    color?: keyof typeof vars.colors;
+};
 const LinkText: React.FC<Props> = ({
     children,
     size = 'm',
@@ -25,9 +28,10 @@ const LinkText: React.FC<Props> = ({
             style.container.lineHeight[lineHeight],
             style.container.weight[weight],
             style.container.color[color],
-            fontFamilies['text'].className,
+            style.container.fontFamily['text'],
         ].join(' ');
     };
+    console.log(getLinkTextStyles());
     return (
         <Link href={url} className={getLinkTextStyles()}>
             {children}

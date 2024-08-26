@@ -1,12 +1,11 @@
 import { style } from '@vanilla-extract/css';
 
-import { borderRadius } from '@/theme/borderRadius';
-import { colors } from '@/theme/colors';
+import { vars } from '@/theme/theme.css';
 
 export const container = style({
-    color: colors.lightBlack,
-    backgroundColor: colors.lightGrey,
-    borderRadius: borderRadius.l,
+    color: vars.colors.lightBlack,
+    backgroundColor: vars.colors.lightGrey,
+    borderRadius: vars.borderRadius.l,
     padding: '4px 8px',
     display: 'inline-flex',
 });

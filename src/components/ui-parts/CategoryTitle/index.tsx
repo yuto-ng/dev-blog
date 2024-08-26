@@ -1,16 +1,18 @@
+import React from 'react';
+
 import * as style from './style.css';
 
 import Title from '@/components/ui-elements/Title';
 
 type Props = {
-    text: string;
+    titleText: string;
 };
 
-const CategoryTitle: React.FC<Props> = ({ text }) => {
+const CategoryTitle: React.FC<Props> = ({ titleText }) => {
     return (
         <div className={style.container}>
             <Title size="l" color="white">
-                {text}
+                {titleText}
             </Title>
         </div>
     );

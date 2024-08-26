@@ -1,3 +1,5 @@
+import React from 'react';
+
 import * as style from './style.css';
 
 import Text from '@/components/ui-elements/Text';

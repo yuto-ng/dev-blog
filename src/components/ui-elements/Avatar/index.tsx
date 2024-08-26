@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Image from 'next/image';
 
 import * as style from './style.css';
@@ -7,7 +9,7 @@ type Props = {
 };
 
 const Avatar: React.FC<Props> = ({ profileImageUrl }) => {
-    const imageUrl = profileImageUrl || '/reactIcons/Avatar.svg';
+    const imageUrl = profileImageUrl ?? '/reactIcons/Avatar.svg';
 
     return (
         <div className={style.container}>

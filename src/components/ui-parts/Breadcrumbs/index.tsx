@@ -1,6 +1,8 @@
 'use client';
 
-import { useSelectedLayoutSegments } from 'next/navigation';
+import React from 'react';
+
+// import { useSelectedLayoutSegments } from 'next/navigation';
 
 import * as style from './style.css';
 
@@ -8,8 +10,7 @@ import Icon from '@/components/ui-elements/Icon';
 import LinkText from '@/components/ui-elements/LinkText';
 
 const Breadcrumbs = () => {
-    const segments = useSelectedLayoutSegments();
-    console.log(segments);
+    // const segments = useSelectedLayoutSegments();
 
     return (
         <div className={style.container}>
@@ -17,13 +18,13 @@ const Breadcrumbs = () => {
                 ホーム
             </LinkText>
             <Icon iconName="FillCaretRight" size="s" />
-            <LinkText
+            {/* <LinkText
                 lineHeight="s"
                 url={`/${segments[0]}/${segments[1]}/${segments[3]}`}
                 color="royalBlue"
             >
                 カテゴリー
-            </LinkText>
+            </LinkText> */}
         </div>
     );
 };
