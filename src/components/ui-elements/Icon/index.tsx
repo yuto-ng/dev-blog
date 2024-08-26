@@ -2,11 +2,9 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import { vars } from '../../../theme/theme.css';
-
 import * as style from './style.css';
 
-// import { vars } from '@/theme/theme.css';
+import { vars } from '@/theme/theme.css';
 
 type IconName =
     | 'FillCaretRight'
