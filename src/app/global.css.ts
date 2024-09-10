@@ -15,7 +15,7 @@ globalStyle('a:hover', HOVER_STYLE);
 
 globalStyle('button', {
     border: 'none',
-    transition: 'opacity 0.2s',
+    transition: 'opacity 0.2s background-color 0.2s',
 });
 
 globalStyle('button:hover', HOVER_STYLE);
