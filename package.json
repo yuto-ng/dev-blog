@@ -6,7 +6,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "biome lint .",
+        "lint": "biome check .",
         "format": "biome format . --write",
         "check": "biome check --apply .",
         "sb": "storybook dev -p 6006",
