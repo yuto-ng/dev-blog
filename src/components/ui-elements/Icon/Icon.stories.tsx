@@ -12,7 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        iconName: 'FillCaretRight',
+        iconName: 'leftArrow',
         size: 'm',
     },
 };
