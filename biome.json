@@ -28,7 +28,7 @@
         "indentStyle": "space",
         "indentWidth": 4,
         "lineWidth": 100,
-        "ignore": [".next/**", "storybook-static/**"],
+        "ignore": [".next/**", "storybook-static/**", "node_modules/**"],
         "lineEnding": "lf"
     },
     "javascript": {
