@@ -1,7 +1,5 @@
-import type React from 'react';
+function CategoryArticles() {
+    return <div />;
+}
 
-const Breadcrumb: React.FC = () => {
-    return <div></div>;
-};
-
-export default Breadcrumb;
+export default CategoryArticles;

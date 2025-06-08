@@ -1,7 +1,5 @@
-import type React from 'react';
-
-const TableOfContents: React.FC = () => {
-    return <div></div>;
-};
+function TableOfContents() {
+    return <div />;
+}
 
 export default TableOfContents;

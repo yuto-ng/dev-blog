@@ -2,16 +2,14 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import * as style from './style.css';
-
 import Icon from '@/components/ui-elements/Icon';
-import Text from '@/components/ui-elements/Text';
+import { ShadcnLabel } from '@/components/ui/label';
 
 type Props = {
     totalPages: number;
 };
 
-const Pagination: React.FC<Props> = ({ totalPages }) => {
+function Pagination({ totalPages }: Props) {
     const searchParams = useSearchParams();
     const query = searchParams.get('page') || '1';
     const currentPage = Number(query);
@@ -48,7 +46,7 @@ const Pagination: React.FC<Props> = ({ totalPages }) => {
                     currentPage,
                     currentPage + 1,
                     '...',
-                    totalPages,
+                    totalPages
                 );
             }
         }
@@ -56,44 +54,37 @@ const Pagination: React.FC<Props> = ({ totalPages }) => {
     };
 
     return (
-        <div className={style.container}>
+        <div className="flex items-center justify-center">
             <button
-                className={style.button}
+                type="button"
                 disabled={currentPage === 1}
                 onClick={() => handleClickButton(currentPage - 1)}
             >
                 <Icon iconName="leftArrow" color="royalBlue" size="l" />
             </button>
-            {generatePagination().map((page, index) =>
+            {generatePagination().map((page) =>
                 page === '...' ? (
-                    <span key={index}>{page}</span>
+                    <span key={page}>{page}</span>
                 ) : (
                     <button
-                        key={index}
-                        className={currentPage === page ? style.currentButton : style.button}
+                        key={page}
+                        type="button"
+                        className={currentPage === page ? 'bg-primary text-white' : ''}
                         onClick={() => handleClickButton(Number(page))}
                     >
-                        <Text
-                            color={currentPage === page ? 'white' : 'royalBlue'}
-                            size="m"
-                            weight="bold"
-                        >
-                            {page}
-                        </Text>
+                        <ShadcnLabel>{page}</ShadcnLabel>
                     </button>
-                ),
+                )
             )}
             <button
-                className={style.button}
+                type="button"
                 disabled={currentPage === totalPages}
                 onClick={() => handleClickButton(currentPage + 1)}
             >
-                <div className={style.endIcon}>
-                    <Icon iconName="rightArrow" color="royalBlue" size="l" />
-                </div>
+                <Icon iconName="rightArrow" color="royalBlue" size="l" />
             </button>
         </div>
     );
-};
+}
 
 export default Pagination;

@@ -1,7 +1,5 @@
-import type React from 'react';
-
-const SideContents: React.FC = () => {
-    return <div></div>;
-};
+function SideContents() {
+    return <div />;
+}
 
 export default SideContents;

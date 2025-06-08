@@ -1,7 +1,5 @@
-import type React from 'react';
+function ArticleDetaile() {
+    return <div />;
+}
 
-const Category: React.FC = () => {
-    return <div></div>;
-};
-
-export default Category;
+export default ArticleDetaile;
