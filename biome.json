@@ -3,6 +3,16 @@
     "organizeImports": {
         "enabled": true
     },
+    "files": {
+        "maxSize": 2000000,
+        "ignore": [
+            ".next/**",
+            "storybook-static/**",
+            "node_modules/**",
+            "public/**",
+            ".storybook/**"
+        ]
+    },
     "linter": {
         "enabled": true,
         "rules": {
@@ -28,7 +38,13 @@
         "indentStyle": "space",
         "indentWidth": 4,
         "lineWidth": 100,
-        "ignore": [".next/**", "storybook-static/**", "node_modules/**"],
+        "ignore": [
+            ".next/**",
+            "storybook-static/**",
+            "node_modules/**",
+            "public/**",
+            ".storybook/**"
+        ],
         "lineEnding": "lf"
     },
     "javascript": {
