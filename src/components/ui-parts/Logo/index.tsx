@@ -1,17 +1,11 @@
 import React from 'react';
 
-import * as style from './style.css';
-
-import Title from '@/components/ui-elements/Title';
-
-const Logo: React.FC = () => {
+function Logo() {
     return (
-        <div className={style.container}>
-            <Title color="white" size="xl" fontFamilyType="logo" letterSpacing="s">
-                SB-engineer
-            </Title>
+        <div>
+            <h3 className="text-white text-2xl font-bold">SB-engineer</h3>
         </div>
     );
-};
+}
 
 export default Logo;

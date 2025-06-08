@@ -2,31 +2,33 @@
 
 import React from 'react';
 
-// import { useSelectedLayoutSegments } from 'next/navigation';
+import {
+    ShadcnBreadcrumb,
+    ShadcnBreadcrumbItem,
+    ShadcnBreadcrumbLink,
+    ShadcnBreadcrumbList,
+    ShadcnBreadcrumbPage,
+    ShadcnBreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 
-import * as style from './style.css';
-
-import Icon from '@/components/ui-elements/Icon';
-import LinkText from '@/components/ui-elements/LinkText';
-
-const Breadcrumbs = () => {
-    // const segments = useSelectedLayoutSegments();
-
+function Breadcrumbs() {
     return (
-        <div className={style.container}>
-            <LinkText lineHeight="s" url="/" color="royalBlue">
-                ホーム
-            </LinkText>
-            <Icon iconName="FillCaretRight" size="s" />
-            {/* <LinkText
-                lineHeight="s"
-                url={`/${segments[0]}/${segments[1]}/${segments[3]}`}
-                color="royalBlue"
-            >
-                カテゴリー
-            </LinkText> */}
-        </div>
+        <ShadcnBreadcrumb>
+            <ShadcnBreadcrumbList>
+                <ShadcnBreadcrumbItem>
+                    <ShadcnBreadcrumbLink href="/">Home</ShadcnBreadcrumbLink>
+                </ShadcnBreadcrumbItem>
+                <ShadcnBreadcrumbSeparator />
+                <ShadcnBreadcrumbItem>
+                    <ShadcnBreadcrumbLink href="/components">Components</ShadcnBreadcrumbLink>
+                </ShadcnBreadcrumbItem>
+                <ShadcnBreadcrumbSeparator />
+                <ShadcnBreadcrumbItem>
+                    <ShadcnBreadcrumbPage>Breadcrumb</ShadcnBreadcrumbPage>
+                </ShadcnBreadcrumbItem>
+            </ShadcnBreadcrumbList>
+        </ShadcnBreadcrumb>
     );
-};
+}
 
 export default Breadcrumbs;

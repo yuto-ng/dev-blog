@@ -1,21 +1,13 @@
+'use client';
+
 import React from 'react';
-
-import * as style from './style.css';
-
-import Title from '@/components/ui-elements/Title';
 
 type Props = {
     titleText: string;
 };
 
-const CategoryTitle: React.FC<Props> = ({ titleText }) => {
-    return (
-        <div className={style.container}>
-            <Title size="l" color="white">
-                {titleText}
-            </Title>
-        </div>
-    );
-};
+function CategoryTitle({ titleText }: Props) {
+    return <h1 className="text-4xl font-extrabold tracking-tight text-lightBlack">{titleText}</h1>;
+}
 
 export default CategoryTitle;

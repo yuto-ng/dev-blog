@@ -1,23 +1,19 @@
-import React from 'react';
-
-import * as style from './style.css';
-
 import Icon from '@/components/ui-elements/Icon';
+import IconButton from '@/components/ui-elements/IconButton';
 
 type Props = {
     handleClickSearchButton: () => void;
 };
 
-const SearchInput: React.FC<Props> = ({ handleClickSearchButton }) => {
+function SearchInput({ handleClickSearchButton }: Props) {
     return (
-        <div className={style.container}>
-            <input className={style.input} placeholder="検索" />
-            {/* TODO: IconButtonコンポーネント作成してもいいかも */}
-            <button className={style.iconButton} onClick={handleClickSearchButton}>
-                <Icon iconName="OutlineSearch" size="m"></Icon>
-            </button>
+        <div className="flex items-center gap-2">
+            <input className="w-full rounded-md border border-gray-300 p-2" placeholder="検索" />
+            <IconButton onClick={handleClickSearchButton}>
+                <Icon iconName="search" size="m" />
+            </IconButton>
         </div>
     );
-};
+}
 
 export default SearchInput;

@@ -1,6 +1,6 @@
-import { readdirSync } from 'fs';
+import { readdirSync } from 'node:fs';
 
-const features = readdirSync('src/features').map(it => ({
+const features = readdirSync('src/features').map((it) => ({
     name: it,
     value: it,
 }));
@@ -25,7 +25,7 @@ export default function (plop) {
                 message: 'コンポーネントの名前を入力してください',
             },
         ],
-        actions: function (data) {
+        actions: (data) => {
             const choicesName = data.name;
             const componentName = data.componentName;
 
@@ -35,17 +35,17 @@ export default function (plop) {
             return [
                 {
                     type: 'add',
-                    path: componentPath + 'index.tsx',
+                    path: `${componentPath}index.tsx`,
                     templateFile: 'plop/component.tsx.hbs',
                 },
                 {
                     type: 'add',
-                    path: componentPath + 'style.css.ts',
+                    path: `${componentPath}style.css.ts`,
                     templateFile: 'plop/styles.css.ts.hbs',
                 },
                 {
                     type: 'add',
-                    path: componentPath + '{{componentName}}.stories.tsx',
+                    path: `${componentPath}{{componentName}}.stories.tsx`,
                     templateFile: 'plop/stories.tsx.hbs',
                 },
             ];
@@ -70,7 +70,7 @@ export default function (plop) {
                 message: 'コンポーネントの名前を入力してください',
             },
         ],
-        actions: function (data) {
+        actions: (data) => {
             const choicesName = data.name;
             const componentName = data.componentName;
 
@@ -80,17 +80,17 @@ export default function (plop) {
             return [
                 {
                     type: 'add',
-                    path: componentPath + 'index.tsx',
+                    path: `${componentPath}index.tsx`,
                     templateFile: 'plop/component.tsx.hbs',
                 },
                 {
                     type: 'add',
-                    path: componentPath + 'style.css.ts',
+                    path: `${componentPath}style.css.ts`,
                     templateFile: 'plop/styles.css.ts.hbs',
                 },
                 {
                     type: 'add',
-                    path: componentPath + '{{componentName}}.stories.tsx',
+                    path: `${componentPath}{{componentName}}.stories.tsx`,
                     templateFile: 'plop/stories.tsx.hbs',
                 },
             ];
