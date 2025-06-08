@@ -2,14 +2,12 @@ import React from 'react';
 
 import Logo from '../Logo';
 
-import * as style from './style.css';
-
-const Header: React.FC = () => {
+function Header() {
     return (
-        <div className={style.container}>
+        <div>
             <Logo />
         </div>
     );
-};
+}
 
 export default Header;

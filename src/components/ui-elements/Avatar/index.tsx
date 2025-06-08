@@ -1,21 +1,21 @@
+'use client';
+
 import React from 'react';
 
 import Image from 'next/image';
-
-import * as style from './style.css';
 
 type Props = {
     profileImageUrl?: string;
 };
 
-const Avatar: React.FC<Props> = ({ profileImageUrl }) => {
+function Avatar({ profileImageUrl }: Props) {
     const imageUrl = profileImageUrl ?? '/reactIcons/Avatar.svg';
 
     return (
-        <div className={style.container}>
-            <Image className={style.content} src={imageUrl} alt="profile" fill />
+        <div>
+            <Image src={imageUrl} alt="profile" fill />
         </div>
     );
-};
+}
 
 export default Avatar;

@@ -2,29 +2,20 @@ import React from 'react';
 
 import Logo from '../Logo';
 
-import * as style from './style.css';
-
 import LinkText from '@/components/ui-elements/LinkText';
-import Text from '@/components/ui-elements/Text';
 
-const Footer: React.FC = () => {
+function Footer() {
     return (
-        <div className={style.container}>
+        <div>
             <Logo />
-            <div className={style.menuContent}>
-                <LinkText color="white" url="/">
-                    問い合わせ
-                </LinkText>
-                <LinkText color="white" url="/">
-                    プライバシーポリシー
-                </LinkText>
-                <LinkText color="white" url="/">
-                    免責事項
-                </LinkText>
-                <Text color="white">©︎ SB-Engineer All rights reserved.</Text>
+            <div>
+                <LinkText href="/">問い合わせ</LinkText>
+                <LinkText href="/">プライバシーポリシー</LinkText>
+                <LinkText href="/">免責事項</LinkText>
+                <p className="text-white">©︎ SB-Engineer All rights reserved.</p>
             </div>
         </div>
     );
-};
+}
 
 export default Footer;

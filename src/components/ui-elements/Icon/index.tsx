@@ -1,42 +1,45 @@
-import React from 'react';
+'use client';
 
 import {
-    AiOutlineLeft,
-    AiOutlineRight,
-    AiOutlineSearch,
-    AiOutlineDoubleRight,
-    AiOutlineDoubleLeft,
-    AiOutlineCaretRight,
-} from 'react-icons/ai';
-import { BsTwitterX } from 'react-icons/bs';
+    ChevronRight as CaretRight,
+    ChevronLeft,
+    ChevronRight,
+    ChevronsLeft,
+    ChevronsRight,
+    Search,
+    X,
+} from 'lucide-react';
 
-import * as style from './style.css';
-
-import { vars } from '@/theme/theme.css';
+import { cn } from '@/lib/utils';
 
 const ICONS = {
-    leftArrow: AiOutlineLeft,
-    rightArrow: AiOutlineRight,
-    twitter: BsTwitterX,
-    search: AiOutlineSearch,
-    doubleRight: AiOutlineDoubleRight,
-    doubleLeft: AiOutlineDoubleLeft,
-    caretRight: AiOutlineCaretRight,
-};
+    leftArrow: ChevronLeft,
+    rightArrow: ChevronRight,
+    x: X,
+    search: Search,
+    doubleRight: ChevronsRight,
+    doubleLeft: ChevronsLeft,
+    caretRight: CaretRight,
+} as const;
 
 type Props = {
     iconName: keyof typeof ICONS;
-    size?: keyof typeof vars.iconSizes;
-    color?: keyof typeof vars.colors;
+    size?: 's' | 'm' | 'l';
+    color?: string;
+    // TODO: 必要に応じてデザインシステム構築
+    className?: string;
 };
 
-const Icon: React.FC<Props> = ({ iconName, size = 'm', color = 'lightBlack' }) => {
+const SIZE_MAP = {
+    s: 'h-4 w-4',
+    m: 'h-6 w-6',
+    l: 'h-8 w-8',
+} as const;
+
+function Icon({ iconName, size = 'm', color = 'currentColor', className }: Props) {
     const IconComponent = ICONS[iconName];
-    return (
-        <div className={style.container[size]}>
-            <IconComponent size={size} color={color} />
-        </div>
-    );
-};
+
+    return <IconComponent className={cn(SIZE_MAP[size], className)} color={color} />;
+}
 
 export default Icon;

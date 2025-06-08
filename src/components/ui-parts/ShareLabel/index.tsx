@@ -1,17 +1,11 @@
-import React from 'react';
+import { ShadcnLabel } from '@/components/ui/label';
 
-import * as style from './style.css';
-
-import Text from '@/components/ui-elements/Text';
-
-const ShareLabel: React.FC = () => {
+function ShareLabel() {
     return (
-        <div className={style.container}>
-            <Text color="royalBlue" weight="bold">
-                SHARE
-            </Text>
+        <div>
+            <ShadcnLabel className="text-royalBlue font-bold">SHARE</ShadcnLabel>
         </div>
     );
-};
+}
 
 export default ShareLabel;

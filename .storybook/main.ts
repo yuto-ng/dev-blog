@@ -1,7 +1,6 @@
+import path from 'node:path';
 import type { StorybookConfig } from '@storybook/nextjs';
-import { VanillaExtractPlugin } from '@vanilla-extract/webpack-plugin';
 import { merge } from 'webpack-merge';
-import * as path from 'path';
 
 const config: StorybookConfig = {
     stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -22,9 +21,8 @@ const config: StorybookConfig = {
     docs: {
         autodocs: 'tag',
     },
-    webpackFinal: async config => {
+    webpackFinal: async (config) => {
         return merge(config, {
-            plugins: [new VanillaExtractPlugin()],
             resolve: {
                 alias: {
                     ...config.resolve?.alias,

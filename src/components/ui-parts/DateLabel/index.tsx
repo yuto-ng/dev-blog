@@ -1,15 +1,16 @@
+'use client';
+
 import React from 'react';
 
-import * as style from './style.css';
+import { BsClock } from 'react-icons/bs';
 
-import Icon from '@/components/ui-elements/Icon';
-import Text from '@/components/ui-elements/Text';
+import { ShadcnLabel } from '@/components/ui/label';
 
 type Props = {
     postDate: Date;
 };
 
-const DateLabel: React.FC<Props> = ({ postDate }) => {
+function DateLabel({ postDate }: Props) {
     const getFormattedDate = () => {
         const d = new Date(postDate);
         const year = d.getFullYear();
@@ -19,11 +20,11 @@ const DateLabel: React.FC<Props> = ({ postDate }) => {
     };
 
     return (
-        <div className={style.container}>
-            <Icon iconName="OutlineClockCircle" size="s"></Icon>
-            <Text lineHeight="s">{getFormattedDate()}</Text>
+        <div className="flex items-center space-x-2">
+            <BsClock className="h-4 w-4" />
+            <ShadcnLabel>{getFormattedDate()}</ShadcnLabel>
         </div>
     );
-};
+}
 
 export default DateLabel;

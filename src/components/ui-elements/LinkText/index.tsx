@@ -1,42 +1,20 @@
-import React, { ReactNode } from 'react';
+'use client';
 
 import Link from 'next/link';
 
-import * as style from './style.css';
-
-import { vars } from '@/theme/theme.css';
+import { ShadcnButton } from '@/components/ui/button';
 
 type Props = {
-    children: ReactNode;
-    url: string;
-    size?: keyof typeof vars.fontSizes;
-    lineHeight?: keyof typeof vars.lineHeights;
-    weight?: keyof typeof vars.fontWeights;
-    color?: keyof typeof vars.colors;
+    href: string;
+    children: React.ReactNode;
 };
-const LinkText: React.FC<Props> = ({
-    children,
-    size = 'm',
-    lineHeight = 'm',
-    weight = 'normal',
-    color = 'lightBlack',
-    url,
-}) => {
-    const getLinkTextStyles = () => {
-        return [
-            style.container.size[size],
-            style.container.lineHeight[lineHeight],
-            style.container.weight[weight],
-            style.container.color[color],
-            style.container.fontFamily['text'],
-        ].join(' ');
-    };
-    console.log(getLinkTextStyles());
+
+function LinkText({ href, children }: Props) {
     return (
-        <Link href={url} className={getLinkTextStyles()}>
-            {children}
-        </Link>
+        <ShadcnButton asChild>
+            <Link href={href}>{children}</Link>
+        </ShadcnButton>
     );
-};
+}
 
 export default LinkText;
