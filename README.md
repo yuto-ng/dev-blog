@@ -2,7 +2,7 @@
 - Next.js
 - React
 - TypeScript
-- vanilla-extract
+- shadcn/ui
 
 それぞれバージョンは最新(適宜更新)。Nextは `app router` を採用する。
 
@@ -10,7 +10,7 @@
 - mainブランチからブランチ切って作業
 - `yarn plop` コマンド実行して指示に従って入力
 - push前に `yarn lint` コマンド実施
-  - Actions(CI)設定できたらする。多分無理
+  - Actions(CI)設定できたらする。
 - 各UIコンポーネントに必ずStorybook実装
 - ディレクトリ構成はとりあえずfeaturesで切る方針(考え中)
 
