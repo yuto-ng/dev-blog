@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 import { BsClock } from 'react-icons/bs';
 
 import { ShadcnLabel } from '@/components/ui/label';

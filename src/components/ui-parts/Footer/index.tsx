@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Logo from '../Logo';
 
 import LinkText from '@/components/ui-elements/LinkText';
