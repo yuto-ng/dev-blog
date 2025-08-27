@@ -1,5 +1,3 @@
-import React from 'react';
-
 import LabelButton from '@/components/ui-elements/LabelButton';
 
 type Props = {

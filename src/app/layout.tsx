@@ -1,5 +1,3 @@
-import type React from 'react';
-
 import { Farsan, Noto_Sans_JP, Zen_Kaku_Gothic_New } from 'next/font/google';
 
 // import Breadcrumbs from '@/components/ui-parts/Breadcrumbs';

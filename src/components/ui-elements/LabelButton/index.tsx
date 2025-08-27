@@ -6,11 +6,9 @@ type Props = {
 };
 
 function LabelButton({ children, onClick }: Props) {
-    return (
-        <div className="flex flex-wrap items-center gap-2 md:flex-row">
-            <ShadcnButton onClick={onClick}>{children}</ShadcnButton>
-        </div>
-    );
+    return <ShadcnButton
+    className=''
+    onClick={onClick}>{children}</ShadcnButton>;
 }
 
 export default LabelButton;
