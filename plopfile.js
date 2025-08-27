@@ -40,11 +40,6 @@ export default function (plop) {
                 },
                 {
                     type: 'add',
-                    path: `${componentPath}style.css.ts`,
-                    templateFile: 'plop/styles.css.ts.hbs',
-                },
-                {
-                    type: 'add',
                     path: `${componentPath}{{componentName}}.stories.tsx`,
                     templateFile: 'plop/stories.tsx.hbs',
                 },
@@ -82,11 +77,6 @@ export default function (plop) {
                     type: 'add',
                     path: `${componentPath}index.tsx`,
                     templateFile: 'plop/component.tsx.hbs',
-                },
-                {
-                    type: 'add',
-                    path: `${componentPath}style.css.ts`,
-                    templateFile: 'plop/styles.css.ts.hbs',
                 },
                 {
                     type: 'add',
