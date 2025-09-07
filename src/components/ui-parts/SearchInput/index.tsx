@@ -21,7 +21,7 @@ function SearchInput({ handleClickSearchButton }: Props) {
             <button
                 type="button"
                 onClick={handleClickSearchButton}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 hover:opacity-80"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 hover:opacity-default"
             >
                 <Icon iconName="search" color="gray" size="m" />
             </button>

@@ -59,7 +59,7 @@ function Pagination({ totalPages }: Props) {
                 type="button"
                 disabled={currentPage === 1}
                 onClick={() => handleClickButton(currentPage - 1)}
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-80 "
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-default "
             >
                 <Icon iconName="leftArrow" color="royalBlue" size="l" />
             </button>}
@@ -75,7 +75,7 @@ function Pagination({ totalPages }: Props) {
                         className={`w-10 h-10 flex items-center justify-center rounded-full border transition-colors ${
                             currentPage === page
                                 ? 'text-white border-royalBlue bg-royalBlue'
-                                : 'bg-white border-royalBlue hover:opacity-80 text-royalBlue'
+                                : 'bg-white border-royalBlue hover:opacity-default text-royalBlue'
                         }`}
                         onClick={() => handleClickButton(Number(page))}
                     >
@@ -87,7 +87,7 @@ function Pagination({ totalPages }: Props) {
                 type="button"
                 disabled={currentPage === totalPages}
                 onClick={() => handleClickButton(currentPage + 1)}
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-80 "
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-default"
             >
                 <Icon iconName="rightArrow" color="royalBlue" size="l" />
             </button>}

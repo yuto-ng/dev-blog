@@ -15,6 +15,9 @@ export default {
                 lightBlack: '#333333',
                 lightGrey: '#D9D9D9',
             },
+            opacity: {
+                default: '0.7',
+            },
         },
     },
     plugins: [require('tailwindcss-animate')],
