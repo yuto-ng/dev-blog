@@ -10,18 +10,99 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Page1Of5: Story = {
     parameters: {
         nextjs: {
             appDirectory: true,
             navigation: {
                 query: {
-                    page: '2',
+                    page: '1',
                 },
             },
         },
     },
     args: {
-        totalPages: 4,
+        totalPages: 5,
+    },
+};
+
+export const Page3Of10: Story = {
+    parameters: {
+        nextjs: {
+            appDirectory: true,
+            navigation: {
+                query: {
+                    page: '3',
+                },
+            },
+        },
+    },
+    args: {
+        totalPages: 10,
+    },
+};
+
+export const Page5Of10: Story = {
+    parameters: {
+        nextjs: {
+            appDirectory: true,
+            navigation: {
+                query: {
+                    page: '5',
+                },
+            },
+        },
+    },
+    args: {
+        totalPages: 10,
+    },
+};
+
+export const Page7Of10: Story = {
+    parameters: {
+        nextjs: {
+            appDirectory: true,
+            navigation: {
+                query: {
+                    page: '7',
+                },
+            },
+        },
+    },
+    args: {
+        totalPages: 10,
+    },
+};
+
+export const Page8Of10: Story = {
+    parameters: {
+        nextjs: {
+            appDirectory: true,
+            navigation: {
+                query: {
+                    page: '8',
+                },
+            },
+        },
+    },
+    args: {
+        totalPages: 10,
+    },
+};
+
+
+export const Page10Of10: Story = {
+    parameters: {
+        nextjs: {
+            appDirectory: true,
+            navigation: {
+                query: {
+                    page: '10',
+                },
+            },
+        },
+    },
+    args: {
+        totalPages: 10,
     },
 };
