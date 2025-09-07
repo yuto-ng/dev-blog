@@ -3,7 +3,7 @@ import CategoryMenu from '.';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-    title: 'organisms/CategoryMenu',
+    title: 'features/CategoryMenu',
     component: CategoryMenu,
 } satisfies Meta<typeof CategoryMenu>;
 
