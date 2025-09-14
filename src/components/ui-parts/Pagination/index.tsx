@@ -55,14 +55,16 @@ function Pagination({ totalPages }: Props) {
 
     return (
         <div className="flex items-center justify-center gap-2">
-            {currentPage > 1 && <button
-                type="button"
-                disabled={currentPage === 1}
-                onClick={() => handleClickButton(currentPage - 1)}
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-default "
-            >
-                <Icon iconName="leftArrow" color="royalBlue" size="l" />
-            </button>}
+            {currentPage > 1 && (
+                <button
+                    type="button"
+                    disabled={currentPage === 1}
+                    onClick={() => handleClickButton(currentPage - 1)}
+                    className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-default "
+                >
+                    <Icon iconName="leftArrow" color="royalBlue" size="l" />
+                </button>
+            )}
             {generatePagination().map((page) =>
                 page === '...' ? (
                     <span key={page} className="px-2 text-gray-500">
@@ -79,18 +81,22 @@ function Pagination({ totalPages }: Props) {
                         }`}
                         onClick={() => handleClickButton(Number(page))}
                     >
-                        <ShadcnLabel className="text-sm font-medium hover:cursor-pointer">{page}</ShadcnLabel>
+                        <ShadcnLabel className="text-sm font-medium hover:cursor-pointer">
+                            {page}
+                        </ShadcnLabel>
                     </button>
                 )
             )}
-            {currentPage < totalPages && <button
-                type="button"
-                disabled={currentPage === totalPages}
-                onClick={() => handleClickButton(currentPage + 1)}
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-default"
-            >
-                <Icon iconName="rightArrow" color="royalBlue" size="l" />
-            </button>}
+            {currentPage < totalPages && (
+                <button
+                    type="button"
+                    disabled={currentPage === totalPages}
+                    onClick={() => handleClickButton(currentPage + 1)}
+                    className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-default"
+                >
+                    <Icon iconName="rightArrow" color="royalBlue" size="l" />
+                </button>
+            )}
         </div>
     );
 }

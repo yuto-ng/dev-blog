@@ -2,18 +2,19 @@ import { IoChevronForward } from 'react-icons/io5';
 
 type Props = {
     title: string;
-    onClick?: () => void;
+    handleClickMenuItem: () => void;
 };
 
-const CategoryMenuItem: React.FC<Props> = ({ title, onClick }) => {
+const CategoryMenuItem: React.FC<Props> = ({ title, handleClickMenuItem }) => {
     return (
-        <div 
-            className="flex items-center justify-between py-3 cursor-pointer hover:opacity-default transition-opacity"
-            onClick={onClick}
+        <button
+            type="button"
+            className="flex w-full items-center justify-between py-3 cursor-pointer hover:opacity-default transition-opacity"
+            onClick={handleClickMenuItem}
         >
             <span className="text-lg text-black">{title}</span>
             <IoChevronForward className="w-5 h-5 text-gray-600" />
-        </div>
+        </button>
     );
 };
 

@@ -90,7 +90,6 @@ export const Page8Of10: Story = {
     },
 };
 
-
 export const Page10Of10: Story = {
     parameters: {
         nextjs: {

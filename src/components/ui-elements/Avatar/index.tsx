@@ -3,15 +3,13 @@
 import Image from 'next/image';
 
 type Props = {
-    profileImageUrl?: string;
+    profileImageUrl: string;
 };
 
 function Avatar({ profileImageUrl }: Props) {
-    const imageUrl = profileImageUrl ?? '/reactIcons/Avatar.svg';
-
     return (
         <div className="relative h-[100px] w-[100px] overflow-hidden rounded-full">
-            <Image src={imageUrl} alt="profile" fill />
+            <Image src={profileImageUrl} alt="profile" fill />
         </div>
     );
 }

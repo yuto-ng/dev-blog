@@ -7,7 +7,7 @@ type BaseProps = {
     title: string;
     postDate: Date;
     onClick: () => void;
-}
+};
 
 type WithImageUrlProps = BaseProps & {
     imageUrl: string;
@@ -19,23 +19,24 @@ type WithEmojiProps = BaseProps & {
     imageUrl?: never;
 };
 
-function Article({ title, postDate, imageUrl, emoji, onClick }: WithImageUrlProps | WithEmojiProps) {
+function Article({
+    title,
+    postDate,
+    imageUrl,
+    emoji,
+    onClick,
+}: WithImageUrlProps | WithEmojiProps) {
     return (
-        <Card 
+        <Card
             className="cursor-pointer hover:shadow-lg transition-shadow duration-200 overflow-hidden"
             onClick={onClick}
         >
             <div className="h-48 bg-teal-400 flex items-center justify-center relative">
                 {imageUrl ? (
-                    <Image 
-                        src={imageUrl} 
-                        alt={title}
-                        fill
-                        className="object-cover"
-                    />
-                ) :
+                    <Image src={imageUrl} alt={title} fill className="object-cover" />
+                ) : (
                     <span className="text-6xl">{emoji}</span>
-                }
+                )}
             </div>
             <CardContent className="p-4 space-y-3">
                 <CardTitle className="text-gray-800 text-sm leading-relaxed font-normal">
@@ -44,7 +45,7 @@ function Article({ title, postDate, imageUrl, emoji, onClick }: WithImageUrlProp
                 <DateLabel postDate={postDate} />
             </CardContent>
         </Card>
-    )
+    );
 }
 
 export default Article;

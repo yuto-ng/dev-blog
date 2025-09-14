@@ -1,4 +1,3 @@
-import Icon from '@/components/ui-elements/Icon';
 import LabelButton from '.';
 
 import type { Meta, StoryObj } from '@storybook/react';

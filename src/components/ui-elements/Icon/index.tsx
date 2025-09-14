@@ -7,20 +7,19 @@ import {
     ChevronsLeft,
     ChevronsRight,
     Search,
-    X,
 } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
 
 import { cn } from '@/lib/utils';
 
 export const ICONS = {
     leftArrow: ChevronLeft,
     rightArrow: ChevronRight,
-    // TODO: Xアイコンどうにかする
-    x: X,
     search: Search,
     doubleRight: ChevronsRight,
     doubleLeft: ChevronsLeft,
     caretRight: CaretRight,
+    xLogo: FaXTwitter,
 } as const;
 
 const SIZE_MAP = {

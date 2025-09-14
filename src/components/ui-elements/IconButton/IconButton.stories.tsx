@@ -1,4 +1,3 @@
-import Icon from '@/components/ui-elements/Icon';
 import IconButton from '.';
 
 import type { Meta, StoryObj } from '@storybook/react';

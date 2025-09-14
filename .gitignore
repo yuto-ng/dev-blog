@@ -42,6 +42,6 @@ next-env.d.ts
 *storybook.log
 
 # ai
-CLAUDE.md
-.claude
 .serena
+.codex
+AGENTS.md

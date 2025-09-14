@@ -6,9 +6,9 @@ type Props = {
     className?: string;
 };
 
-function LabelButton({ children, onClick, className }: Props) {
+function LabelButton({ children, onClick }: Props) {
     return (
-        <ShadcnButton className={className} onClick={onClick}>
+        <ShadcnButton className="" onClick={onClick}>
             {children}
         </ShadcnButton>
     );
