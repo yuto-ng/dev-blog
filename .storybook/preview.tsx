@@ -26,6 +26,13 @@ const defaultNavigationContext = {
 
 const preview: Preview = {
     parameters: {
+        backgrounds: {
+            default: 'app-gray',
+            values: [
+                { name: 'app-gray', value: '#f3f4f6' }, // light gray background
+                { name: 'white', value: '#ffffff' },
+            ],
+        },
         nextjs: {
             appDirectory: true,
             navigation: defaultNavigationContext,

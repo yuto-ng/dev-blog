@@ -5,7 +5,13 @@ type Props = {
 };
 
 function CategoryTitle({ titleText }: Props) {
-    return <h1 className="text-4xl font-extrabold tracking-tight text-lightBlack">{titleText}</h1>;
+    return (
+        <div className="w-full rounded-lg bg-royalBlue py-4 px-6">
+            <h1 className="text-center text-white text-2xl md:text-3xl font-bold tracking-tight">
+                {titleText}
+            </h1>
+        </div>
+    );
 }
 
 export default CategoryTitle;
