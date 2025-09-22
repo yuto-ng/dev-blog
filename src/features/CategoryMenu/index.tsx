@@ -7,14 +7,18 @@ type CategoryItem = {
 
 type Props = {
     categories: CategoryItem[];
-    onClick: () => void;
+    handleClickMenuItem: () => void;
 };
 
-function CategoryMenu({ categories, onClick }: Props) {
+function CategoryMenu({ categories, handleClickMenuItem }: Props) {
     return (
         <div className="rounded-lg divide-y divide-gray-400">
             {categories.map((category) => (
-                <CategoryMenuItem key={category.id} title={category.title} onClick={onClick} />
+                <CategoryMenuItem
+                    key={category.id}
+                    title={category.title}
+                    handleClickMenuItem={handleClickMenuItem}
+                />
             ))}
         </div>
     );

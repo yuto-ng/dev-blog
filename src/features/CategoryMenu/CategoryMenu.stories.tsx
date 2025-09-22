@@ -20,6 +20,6 @@ export const Default: Story = {
             { title: '健康・医療', id: 5 },
             { title: '教育', id: 6 },
         ],
-        onClick: () => console.log('カテゴリーがクリックされました'),
+        handleClickMenuItem: () => console.log('カテゴリーがクリックされました'),
     },
 };

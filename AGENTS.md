@@ -76,3 +76,6 @@
 - Components: PascalCase directories with `index.tsx` entry; colocate CSS/vanilla-extract where applicable.
 - State: Use Recoil; centralize keys in `src/store/recoilKeys.ts`.
 - Styles: Tailwind utility-first; keep class lists readable and deduplicated.
+
+### JSX Spacing
+- Do not insert blank lines between sibling JSX elements/components inside a return block. Keep elements contiguous. Use blank lines only when separating with a comment or control block where it materially improves readability.
