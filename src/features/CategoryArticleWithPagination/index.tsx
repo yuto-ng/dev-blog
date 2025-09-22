@@ -1,6 +1,6 @@
 import Article from '@/components/organisms/Article';
-import LabelButton from '@/components/ui-elements/LabelButton';
 import CategoryTitle from '@/components/ui-parts/CategoryTitle';
+import Pagination from '@/components/ui-parts/Pagination';
 
 type ArticleItem = {
     id: string | number;
@@ -14,16 +14,10 @@ type ArticleItem = {
 type Props = {
     categoryTitle: string;
     articles: ArticleItem[];
-    onClickMore: () => void;
-    moreButtonText?: string;
+    totalPages: number;
 };
 
-function CategoryArticles({
-    categoryTitle,
-    articles,
-    onClickMore,
-    moreButtonText = 'カテゴリーをもっと見る',
-}: Props) {
+function CategoryArticleWithPagination({ categoryTitle, articles, totalPages }: Props) {
     return (
         <div className="rounded-lg bg-white p-8">
             <div className="text-center">
@@ -44,15 +38,10 @@ function CategoryArticles({
                 })}
             </div>
             <div className="mt-16 flex justify-center">
-                <LabelButton
-                    onClick={onClickMore}
-                    className="bg-royalBlue text-white hover:bg-royalBlue/90"
-                >
-                    {moreButtonText}
-                </LabelButton>
+                <Pagination totalPages={totalPages} />
             </div>
         </div>
     );
 }
 
-export default CategoryArticles;
+export default CategoryArticleWithPagination;
