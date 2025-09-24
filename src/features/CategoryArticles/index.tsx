@@ -6,7 +6,7 @@ type ArticleItem = {
     id: string | number;
     title: string;
     postDate: Date;
-    onClick: () => void;
+    href: string;
     imageUrl?: string;
     emoji?: string;
 };
@@ -37,7 +37,7 @@ function CategoryArticles({
                             key={a.id}
                             title={a.title}
                             postDate={a.postDate}
-                            onClick={a.onClick}
+                            href={a.href}
                             {...(imageUrl ? { imageUrl } : { emoji: emoji ?? '📝' })}
                         />
                     );
