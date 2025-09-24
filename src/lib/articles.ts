@@ -122,7 +122,7 @@ export function getCategories() {
     const articles = getAllArticles();
     const categories = new Map<string, { id: string; name: string; count: number }>();
 
-    articles.forEach((article) => {
+    for (const article of articles) {
         const existing = categories.get(article.categoryId);
         if (existing) {
             existing.count += 1;
@@ -133,7 +133,7 @@ export function getCategories() {
                 count: 1,
             });
         }
-    });
+    }
 
     return Array.from(categories.values());
 }

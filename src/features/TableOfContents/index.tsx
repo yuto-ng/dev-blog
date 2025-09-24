@@ -28,7 +28,7 @@ function TableOfContents({ headings }: Props) {
                                 {
                                     'pl-4 text-slate-600': heading.level === 2,
                                     'pl-8 text-slate-500 text-xs': heading.level === 3,
-                                },
+                                }
                             )}
                         >
                             {heading.text}

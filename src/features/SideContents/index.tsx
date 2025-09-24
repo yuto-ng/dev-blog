@@ -26,7 +26,7 @@ function SideContents({ profile, categories }: Props) {
     };
     return (
         <aside className="w-full space-y-6 lg:w-[250px]">
-                <SearchInput handleClickSearchButton={handleClickSearchButton} />
+            <SearchInput handleClickSearchButton={handleClickSearchButton} />
             <Profile
                 description={profile.description}
                 profileImageUrl={profile.profileImageUrl}

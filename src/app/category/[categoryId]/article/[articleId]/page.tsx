@@ -9,10 +9,10 @@ import SideContents from '@/features/SideContents';
 import TableOfContents, { type TableOfContentsHeading } from '@/features/TableOfContents';
 import { extractHeadings, getAllArticles, getArticleBySlug, getCategories } from '@/lib/articles';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import { FaFacebookF, FaLine, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
-import { FaFacebookF, FaLine, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
 
 const mdxComponents = {
     Callout,
