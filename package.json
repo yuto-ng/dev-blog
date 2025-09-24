@@ -11,8 +11,7 @@
         "check": "biome check --apply .",
         "sb": "storybook dev -p 6006",
         "build-storybook": "storybook build",
-        "plop": "plop",
-        "storybook": "storybook dev -p 6006"
+        "plop": "plop"
     },
     "dependencies": {
         "@radix-ui/react-label": "^2.1.7",

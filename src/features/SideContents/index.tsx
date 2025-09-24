@@ -1,3 +1,5 @@
+'use client';
+
 import Profile from '@/components/organisms/Profile';
 import CategoryMenuItem from '@/components/ui-parts/CategoryMenuItem';
 import SearchInput from '@/components/ui-parts/SearchInput';
@@ -8,20 +10,26 @@ type CategoryItem = {
 };
 
 type Props = {
-    onSearch: () => void;
     profile: {
         description: string;
         profileImageUrl: string;
         twitterUrl: string;
     };
     categories: CategoryItem[];
-    handleClickMenuItem: (id: number) => void;
 };
 
-function SideContents({ onSearch, profile, categories, handleClickMenuItem }: Props) {
+function SideContents({ profile, categories }: Props) {
+    const handleClickSearchButton = () => {
+        // TODO: 実際の検索ロジックを実装
+        // console.log('search triggered');
+    };
+    const handleClickMenuItem = (id: number) => {
+        // TODO: カテゴリクリック時の遷移 or フィルタ処理を実装
+        void id; // 一時的に未使用警告抑止
+    };
     return (
         <aside className="space-y-6">
-            <SearchInput handleClickSearchButton={onSearch} />
+            <SearchInput handleClickSearchButton={handleClickSearchButton} />
             <Profile
                 description={profile.description}
                 profileImageUrl={profile.profileImageUrl}
