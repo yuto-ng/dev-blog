@@ -12,6 +12,11 @@
 - 各UIコンポーネントに必ずStorybook実装
 - ディレクトリ構成はとりあえずfeaturesで切る方針(考え中)
 
+# 記事の追加方法
+- 記事は `content/articles` 配下に `.mdx` ファイルとして追加する
+- フロントマターに `title`, `date`, `categoryId`, `categoryName`, `excerpt` などを設定する
+- コミットしてデプロイすると自動でカテゴリ一覧・記事詳細ページに反映される
+
 # ディレクトリ構成
 src/  
 ├─ app/  

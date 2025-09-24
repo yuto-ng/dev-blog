@@ -13,19 +13,20 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         title: 'カテゴリータイトル',
+        href: '/category/demo/1',
     },
 };
 
 export const WithClickHandler: Story = {
     args: {
         title: 'テクノロジー',
-        onClick: () => console.log('カテゴリーがクリックされました'),
+        handleClickMenuItem: () => console.log('カテゴリーがクリックされました'),
     },
 };
 
 export const LongTitle: Story = {
     args: {
         title: '長いカテゴリータイトルの例です',
-        onClick: () => console.log('長いタイトルがクリックされました'),
+        href: '/category/long/1',
     },
 };

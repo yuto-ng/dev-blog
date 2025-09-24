@@ -7,20 +7,30 @@ import { ShadcnLabel } from '@/components/ui/label';
 
 type Props = {
     totalPages: number;
+    currentPage?: number;
+    paginationBasePath?: string;
+    pageParamKey?: string;
 };
 
-function Pagination({ totalPages }: Props) {
+function Pagination({ totalPages, currentPage, paginationBasePath, pageParamKey = 'page' }: Props) {
     const searchParams = useSearchParams();
-    const query = searchParams.get('page') || '1';
-    const currentPage = Number(query);
-
     const router = useRouter();
 
     const handleClickButton = (page: number) => {
+        if (paginationBasePath) {
+            router.push(`${paginationBasePath}/${page}`);
+            return;
+        }
+
         const params = new URLSearchParams(searchParams.toString());
-        params.set('page', page.toString());
+        params.set(pageParamKey, page.toString());
         router.push(`?${params.toString()}`);
     };
+
+    const parsedPage = Number(currentPage ?? searchParams.get(pageParamKey) ?? '1');
+    const resolvedCurrentPage = Number.isNaN(parsedPage)
+        ? 1
+        : Math.min(Math.max(parsedPage, 1), totalPages);
 
     const generatePagination = () => {
         const pages = [];
@@ -31,10 +41,10 @@ function Pagination({ totalPages }: Props) {
             }
         } else {
             // ページ数が6以上の場合の処理
-            if (currentPage <= 3) {
+            if (resolvedCurrentPage <= 3) {
                 // 最初の4ページと最後のページを表示
                 pages.push(1, 2, 3, 4, '...', totalPages);
-            } else if (currentPage >= totalPages - 2) {
+            } else if (resolvedCurrentPage >= totalPages - 2) {
                 // 最後の4ページと最初のページを表示
                 pages.push(1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
             } else {
@@ -42,9 +52,9 @@ function Pagination({ totalPages }: Props) {
                 pages.push(
                     1,
                     '...',
-                    currentPage - 1,
-                    currentPage,
-                    currentPage + 1,
+                    resolvedCurrentPage - 1,
+                    resolvedCurrentPage,
+                    resolvedCurrentPage + 1,
                     '...',
                     totalPages
                 );
@@ -55,11 +65,11 @@ function Pagination({ totalPages }: Props) {
 
     return (
         <div className="flex items-center justify-center gap-2">
-            {currentPage > 1 && (
+            {resolvedCurrentPage > 1 && (
                 <button
                     type="button"
-                    disabled={currentPage === 1}
-                    onClick={() => handleClickButton(currentPage - 1)}
+                    disabled={resolvedCurrentPage === 1}
+                    onClick={() => handleClickButton(resolvedCurrentPage - 1)}
                     className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-default "
                 >
                     <Icon iconName="leftArrow" color="royalBlue" size="l" />
@@ -75,7 +85,7 @@ function Pagination({ totalPages }: Props) {
                         key={page}
                         type="button"
                         className={`w-10 h-10 flex items-center justify-center rounded-full border transition-colors ${
-                            currentPage === page
+                            resolvedCurrentPage === page
                                 ? 'text-white border-royalBlue bg-royalBlue'
                                 : 'bg-white border-royalBlue hover:opacity-default text-royalBlue'
                         }`}
@@ -87,11 +97,11 @@ function Pagination({ totalPages }: Props) {
                     </button>
                 )
             )}
-            {currentPage < totalPages && (
+            {resolvedCurrentPage < totalPages && (
                 <button
                     type="button"
-                    disabled={currentPage === totalPages}
-                    onClick={() => handleClickButton(currentPage + 1)}
+                    disabled={resolvedCurrentPage === totalPages}
+                    onClick={() => handleClickButton(resolvedCurrentPage + 1)}
                     className="w-10 h-10 flex items-center justify-center rounded-full border border-royalBlue bg-white hover:opacity-default"
                 >
                     <Icon iconName="rightArrow" color="royalBlue" size="l" />

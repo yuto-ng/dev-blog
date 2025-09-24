@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import Article from '@/components/organisms/Article';
 import CategoryTitle from '@/components/ui-parts/CategoryTitle';
 import Pagination from '@/components/ui-parts/Pagination';
@@ -15,11 +17,19 @@ type Props = {
     categoryTitle: string;
     articles: ArticleItem[];
     totalPages: number;
+    currentPage?: number;
+    paginationBasePath?: string;
 };
 
-function CategoryArticleWithPagination({ categoryTitle, articles, totalPages }: Props) {
+function CategoryArticleWithPagination({
+    categoryTitle,
+    articles,
+    totalPages,
+    currentPage,
+    paginationBasePath,
+}: Props) {
     return (
-        <div className="rounded-lg bg-white p-8">
+        <div className="rounded-lg bg-white p-8 shadow-sm">
             <div className="text-center">
                 <CategoryTitle titleText={categoryTitle} />
             </div>
@@ -38,7 +48,13 @@ function CategoryArticleWithPagination({ categoryTitle, articles, totalPages }: 
                 })}
             </div>
             <div className="mt-16 flex justify-center">
-                <Pagination totalPages={totalPages} />
+                <Suspense fallback={null}>
+                    <Pagination
+                        totalPages={totalPages}
+                        currentPage={currentPage}
+                        paginationBasePath={paginationBasePath}
+                    />
+                </Suspense>
             </div>
         </div>
     );

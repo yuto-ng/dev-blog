@@ -16,7 +16,7 @@ function SearchInput({ handleClickSearchButton }: Props) {
     return (
         <div className="relative w-full">
             <input
-                className="w-full rounded-md border border-gray-300 p-2 pr-10"
+                className="w-full rounded-lg border border-gray-300 p-2 pr-10"
                 placeholder="検索"
                 onKeyDown={handleKeyDown}
             />

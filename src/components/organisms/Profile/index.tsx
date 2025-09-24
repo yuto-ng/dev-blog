@@ -9,7 +9,7 @@ type Props = {
 
 function Profile({ description, profileImageUrl, twitterUrl }: Props) {
     return (
-        <div className="rounded-lg border border-gray-200 bg-white p-8 text-center">
+        <div className="rounded-lg border border-gray-200 bg-white p-8 text-center shadow-sm">
             <div className="flex justify-center">
                 <Avatar profileImageUrl={profileImageUrl} />
             </div>

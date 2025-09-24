@@ -14,18 +14,18 @@ type ArticleItem = {
 type Props = {
     categoryTitle: string;
     articles: ArticleItem[];
-    onClickMore: () => void;
+    moreHref: string;
     moreButtonText?: string;
 };
 
 function CategoryArticles({
     categoryTitle,
     articles,
-    onClickMore,
+    moreHref,
     moreButtonText = 'カテゴリーをもっと見る',
 }: Props) {
     return (
-        <div className="rounded-lg bg-white p-8">
+        <div className="rounded-lg bg-white p-8 shadow-sm">
             <div className="text-center">
                 <CategoryTitle titleText={categoryTitle} />
             </div>
@@ -45,7 +45,7 @@ function CategoryArticles({
             </div>
             <div className="mt-16 flex justify-center">
                 <LabelButton
-                    onClick={onClickMore}
+                    href={moreHref}
                     className="bg-royalBlue text-white hover:bg-royalBlue/90"
                 >
                     {moreButtonText}

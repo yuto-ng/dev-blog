@@ -17,7 +17,7 @@ const articles = Array.from({ length: 10 }, (_, i) => ({
     title: '記事のタイトルが入ります。 記事のタイトルが入ります。 記事のタイトルが入ります。',
     postDate: now,
     imageUrl: `https://picsum.photos/seed/p${i + 1}/600/400`,
-    onClick: () => console.log(`open article ${i + 1}`),
+    href: `/category/demo/article/${i + 1}`,
 }));
 
 export const Default: Story = {
@@ -25,5 +25,6 @@ export const Default: Story = {
         categoryTitle: 'カテゴリ―タイトル',
         articles,
         totalPages: 7,
+        currentPage: 1,
     },
 };

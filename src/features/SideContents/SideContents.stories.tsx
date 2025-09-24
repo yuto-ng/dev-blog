@@ -12,7 +12,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        onSearch: () => console.log('search clicked'),
         profile: {
             description:
                 '自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。自己紹介文が入ります。',
@@ -20,10 +19,9 @@ export const Default: Story = {
             twitterUrl: 'https://twitter.com/',
         },
         categories: [
-            { id: 1, title: 'カテゴリータイトル' },
-            { id: 2, title: 'カテゴリータイトル' },
-            { id: 3, title: 'カテゴリータイトル' },
+            { id: 'engineering', title: 'カテゴリータイトル', href: '/category/engineering/1' },
+            { id: 'design', title: 'カテゴリータイトル', href: '/category/design/1' },
+            { id: 'life', title: 'カテゴリータイトル', href: '/category/life/1' },
         ],
-        handleClickMenuItem: (id: number) => console.log('category click', id),
     },
 };

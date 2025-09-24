@@ -12,22 +12,22 @@ export default function SbEngineerPage() {
     }));
 
     const categories = [
-        { id: 1, title: 'カテゴリータイトル' },
-        { id: 2, title: 'カテゴリータイトル' },
-        { id: 3, title: 'カテゴリータイトル' },
+        { id: '1', title: 'カテゴリータイトル', href: '/category/1/1' },
+        { id: '2', title: 'カテゴリータイトル', href: '/category/2/1' },
+        { id: '3', title: 'カテゴリータイトル', href: '/category/3/1' },
     ];
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="md:col-span-2">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-[minmax(0,1fr)_250px]">
+                <div>
                     <CategoryArticleWithPagination
                         categoryTitle="カテゴリ―タイトル"
                         articles={articles}
                         totalPages={7}
                     />
                 </div>
-                <div>
+                <div className="md:sticky md:top-28">
                     <SideContents
                         profile={{
                             description:
