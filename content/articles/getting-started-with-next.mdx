@@ -1,0 +1,50 @@
+---
+title: "Next.jsでブログを始める"
+date: "2024-05-12"
+categoryId: "engineering"
+categoryName: "エンジニアリング"
+tags:
+  - nextjs
+  - mdx
+excerpt: "Next.js App Router と MDX を使ってブログを構築する手順を解説します。"
+heroImage: "https://picsum.photos/seed/nextjs-blog/1200/630"
+---
+
+import Link from 'next/link'
+import { Callout } from '@/components/mdx/Callout'
+
+# Next.jsでブログを始める
+
+静的サイト生成の仕組みを活用すれば、Git に記事を追加するだけでブログを公開できます。
+
+## 1. コンテンツをMDXで管理
+
+`content/articles` に `.mdx` ファイルを追加するだけで記事が増えていきます。フロントマターにはタイトルやカテゴリーを記述しましょう。
+
+## 2. デプロイはVercelにお任せ
+
+Vercel Hobby プランを使えば、プッシュするだけでビルドとデプロイが自動で実行されます。
+
+<Link href="https://vercel.com/">Vercel</Link> は Next.js との親和性が高く、Preview 機能も便利です。
+
+## 3. 記事にコンポーネントを埋め込む
+
+MDX なので、React コンポーネントを記事中に差し込むことも可能です。
+
+```tsx
+export function Callout({ children }: { children: React.ReactNode }) {
+    return <div className="rounded border-l-4 border-royalBlue bg-blue-50 p-4">{children}</div>;
+}
+```
+
+<Callout>
+    読者に強調したいポイントがあれば、Callout コンポーネントで包んでみましょう。
+</Callout>
+
+### まとめ
+
+1. 記事は Git で管理
+2. デプロイは自動化
+3. 必要に応じてコメントや検索を追加
+
+これで低コスト・高信頼な技術ブログが完成します。

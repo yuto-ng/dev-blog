@@ -15,35 +15,35 @@ const now = new Date();
 export const Default: Story = {
     args: {
         categoryTitle: 'カテゴリ―タイトル',
-        onClickMore: () => console.log('more categories'),
+        moreHref: '/category/demo/1',
         articles: [
             {
                 id: 1,
                 title: '記事のタイトルが入ります。 記事のタイトルが入ります。 記事のタイトルが入ります。',
                 postDate: now,
                 imageUrl: 'https://picsum.photos/seed/1/600/400',
-                onClick: () => console.log('read more 1'),
+                href: '/category/demo/article/1',
             },
             {
                 id: 2,
                 title: '記事のタイトルが入ります。 記事のタイトルが入ります。 記事のタイトルが入ります。',
                 postDate: now,
                 imageUrl: 'https://picsum.photos/seed/2/600/400',
-                onClick: () => console.log('read more 2'),
+                href: '/category/demo/article/2',
             },
             {
                 id: 3,
                 title: '記事のタイトルが入ります。 記事のタイトルが入ります。 記事のタイトルが入ります。',
                 postDate: now,
                 imageUrl: 'https://picsum.photos/seed/3/600/400',
-                onClick: () => console.log('read more 3'),
+                href: '/category/demo/article/3',
             },
             {
                 id: 4,
                 title: '記事のタイトルが入ります。 記事のタイトルが入ります。 記事のタイトルが入ります。',
                 postDate: now,
                 imageUrl: 'https://picsum.photos/seed/4/600/400',
-                onClick: () => console.log('read more 4'),
+                href: '/category/demo/article/4',
             },
         ],
     },

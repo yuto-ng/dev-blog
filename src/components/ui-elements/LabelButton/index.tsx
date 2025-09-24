@@ -1,14 +1,25 @@
+import Link from 'next/link';
+
 import { ShadcnButton } from '@/components/ui/button';
 
 type Props = {
     children: React.ReactNode;
-    onClick: () => void;
+    onClick?: () => void;
     className?: string;
+    href?: string;
 };
 
-function LabelButton({ children, onClick }: Props) {
+function LabelButton({ children, onClick, className, href }: Props) {
+    if (href) {
+        return (
+            <ShadcnButton className={className} asChild>
+                <Link href={href}>{children}</Link>
+            </ShadcnButton>
+        );
+    }
+
     return (
-        <ShadcnButton className="" onClick={onClick}>
+        <ShadcnButton className={className} onClick={onClick}>
             {children}
         </ShadcnButton>
     );

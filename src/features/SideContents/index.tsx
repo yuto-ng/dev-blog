@@ -5,8 +5,9 @@ import CategoryMenuItem from '@/components/ui-parts/CategoryMenuItem';
 import SearchInput from '@/components/ui-parts/SearchInput';
 
 type CategoryItem = {
-    id: number;
+    id: string;
     title: string;
+    href: string;
 };
 
 type Props = {
@@ -23,27 +24,21 @@ function SideContents({ profile, categories }: Props) {
         // TODO: 実際の検索ロジックを実装
         // console.log('search triggered');
     };
-    const handleClickMenuItem = (id: number) => {
-        // TODO: カテゴリクリック時の遷移 or フィルタ処理を実装
-        void id; // 一時的に未使用警告抑止
-    };
     return (
-        <aside className="space-y-6">
-            <SearchInput handleClickSearchButton={handleClickSearchButton} />
+        <aside className="w-full space-y-6 lg:w-[250px]">
+                <SearchInput handleClickSearchButton={handleClickSearchButton} />
             <Profile
                 description={profile.description}
                 profileImageUrl={profile.profileImageUrl}
                 twitterUrl={profile.twitterUrl}
             />
-            <nav className="divide-y divide-gray-200">
-                {categories.map((c) => (
-                    <CategoryMenuItem
-                        key={c.id}
-                        title={c.title}
-                        handleClickMenuItem={() => handleClickMenuItem(c.id)}
-                    />
-                ))}
-            </nav>
+            <div className="rounded-lg bg-white p-4 shadow-sm">
+                <nav className="divide-y divide-gray-200">
+                    {categories.map((c) => (
+                        <CategoryMenuItem key={c.id} title={c.title} href={c.href} />
+                    ))}
+                </nav>
+            </div>
         </aside>
     );
 }
