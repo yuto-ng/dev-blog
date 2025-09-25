@@ -11,9 +11,9 @@ function Footer() {
                 </div>
                 <div className="flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6">
                     <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 text-white">
-                        <LinkText href="/">問い合わせ</LinkText>
-                        <LinkText href="/">プライバシーポリシー</LinkText>
-                        <LinkText href="/">免責事項</LinkText>
+                        <LinkText href="mailto:y.t.n1110.77@gmail.com">問い合わせ</LinkText>
+                        <LinkText href="/privacy">プライバシーポリシー</LinkText>
+                        <LinkText href="/disclaimer">免責事項</LinkText>
                     </div>
                     <p className="text-white text-sm">©︎ SB-Engineer All rights reserved.</p>
                 </div>
