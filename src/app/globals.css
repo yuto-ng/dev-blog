@@ -80,3 +80,36 @@
         --chart-5: 340 75% 55%;
     }
 }
+
+body {
+    background-color: #f0f6ff;
+}
+
+pre[data-theme] {
+    @apply relative overflow-x-auto rounded-xl bg-slate-900 px-4 pb-4 pt-8 text-slate-100 shadow-inner;
+}
+
+pre[data-theme] code {
+    @apply bg-transparent text-inherit;
+}
+
+pre[data-theme]::before {
+    content: attr(data-language);
+    @apply absolute right-4 top-2 text-[10px] uppercase tracking-wide text-slate-400;
+}
+
+pre[data-theme] .line {
+    @apply block min-h-[1.5rem];
+}
+
+pre[data-theme] [data-highlighted-line] {
+    @apply bg-slate-800/70;
+}
+
+[data-highlighted-chars] {
+    @apply rounded bg-slate-700/70 px-1 text-slate-100;
+}
+
+code:not([data-theme]) {
+    @apply rounded bg-slate-100 px-1.5 py-0.5 font-mono text-sm text-slate-800;
+}

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { Callout } from '@/components/mdx/Callout';
+import { Code, Pre } from '@/components/mdx/CodeBlock';
 import DateLabel from '@/components/ui-parts/DateLabel';
 import ShareLabel from '@/components/ui-parts/ShareLabel';
 import SideContents from '@/features/SideContents';
@@ -11,12 +12,15 @@ import { extractHeadings, getAllArticles, getArticleBySlug, getCategories } from
 import { compileMDX } from 'next-mdx-remote/rsc';
 import { FaFacebookF, FaLine, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
 const mdxComponents = {
     Callout,
     Link,
+    pre: Pre,
+    code: Code,
 };
 
 const profileSection = {
@@ -68,7 +72,11 @@ export default async function ArticlePage({
         options: {
             mdxOptions: {
                 remarkPlugins: [remarkGfm],
-                rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]],
+                rehypePlugins: [
+                    rehypeSlug,
+                    [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+                    [rehypePrettyCode, { keepBackground: false }],
+                ],
             },
         },
     });
