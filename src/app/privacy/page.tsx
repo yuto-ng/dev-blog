@@ -41,7 +41,9 @@ export default function PrivacyPolicyPage() {
                 <div className="mt-8 space-y-6">
                     {sections.map((section) => (
                         <article key={section.title}>
-                            <h2 className="text-xl font-semibold text-slate-900">{section.title}</h2>
+                            <h2 className="text-xl font-semibold text-slate-900">
+                                {section.title}
+                            </h2>
                             <p className="mt-2 leading-relaxed text-slate-700">{section.body}</p>
                         </article>
                     ))}
